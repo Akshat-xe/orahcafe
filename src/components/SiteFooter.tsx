@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Star, Wifi, Trees, ArrowUpRight, Instagram, Facebook } from "lucide-react";
 import { business, food } from "@/data/menu";
+import logo from "@/assets/logo.png";
 
 const mostExpensive = food
   .flatMap((c) => c.items)
@@ -16,9 +17,11 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink font-display text-xl">
-                o
-              </span>
+              <img
+                src={logo}
+                alt="Orah Cafe"
+                className="h-10 w-10 rounded-xl object-contain bg-cream p-0.5"
+              />
               <span className="font-display text-2xl">Orah Cafe</span>
             </div>
             <p className="mt-4 max-w-md text-sm text-ink-foreground/70">

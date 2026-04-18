@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { business } from "@/data/menu";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/" as const, label: "Home" },
@@ -35,10 +36,8 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 pointer-events-none ${
-        scrolled
-          ? "py-2 bg-white/75 backdrop-blur-xl backdrop-saturate-200 border-b border-white/30 shadow-soft"
-          : "py-3 bg-white/40 backdrop-blur-md"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 pointer-events-none ${
+        scrolled ? "py-2" : "py-3"
       }`}
     >
       <div
@@ -49,9 +48,11 @@ export function SiteNav() {
           className="flex items-center gap-2 active:scale-95 transition-transform"
           onClick={() => setOpen(false)}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground font-display text-lg">
-            o
-          </span>
+          <img
+            src={logo}
+            alt="Orah Cafe"
+            className="h-9 w-9 rounded-xl object-contain"
+          />
           <span className="font-display text-lg tracking-tight sm:text-xl">Orah Cafe</span>
         </Link>
 
