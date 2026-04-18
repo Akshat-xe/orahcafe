@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/orah-cafe-perth/",
+  base: "/orahcafe/",
   plugins: [
     tanstackRouter({ routesDirectory: "./src/routes" }),
     react(),
